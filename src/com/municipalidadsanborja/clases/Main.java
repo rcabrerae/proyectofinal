@@ -29,6 +29,7 @@ public class Main {
 
         mun1.registrarBoleto(12345,"24/11/21");
         Bus b1 = new Bus(1);
+        Bus b2 = new Bus(2);
         mun1.asignarBus(12345,b1);
         //mun1.asignarBusaPasajero(12345,74835124);
         b1.registrarAsiento(1);

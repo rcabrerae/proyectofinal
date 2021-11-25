@@ -43,7 +43,7 @@ public class Main {
         System.out.println(mun1.buscarPasajeroxDNI(74835124));
 
         System.out.println("BUSCAR POR FECHA Y NUMERO DE BUS");
-        //System.out.println(mun1.buscarxFechaxNBus("24/11/21",12345));
+        System.out.println(mun1.buscarxFechaxNBus("24/11/21",1));
     }
 
 }

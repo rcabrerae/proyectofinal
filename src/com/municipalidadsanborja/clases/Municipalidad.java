@@ -35,13 +35,17 @@ public class Municipalidad {
         }
         return null;
     }
-   /* public Pasajero buscarxFechaxNBus(String fecha,int codigo){
+        public List<Pasajero> buscarxFechaxNBus(String fecha,int numbus){
+        List<Pasajero> pasajero1= new ArrayList<>();
         for(Boleto b1:boletos){
-            if(b1.getFechareserva().equals(fecha)&&b1.getCodigo()==codigo){
-                    return b1.getPasajero() ;
+            if(b1.getFechareserva().equals(fecha)&&b1.getBus().getNumerobus()==numbus){
+                    for(Pasajero pasajero:pasajeros){
+                        pasajero1.add(pasajero);
+                    }
                 }
             }
-        }*/
+        return pasajero1;
+        }
 
     public Boleto buscarBoletoxCodigo(int codigo){
         for(Boleto bolet:boletos){

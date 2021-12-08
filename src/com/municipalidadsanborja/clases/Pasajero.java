@@ -1,18 +1,21 @@
 package com.municipalidadsanborja.clases;
 
-public class Pasajero {
+public abstract class Pasajero {
     private int DNI;
     private String telefono;
     private String estadocivil;
     private int edad;
     private String correo;
+    private boolean miembro;
+    private String regalo;
 
-    public Pasajero(int DNI,String telefono, String estadocivil, int edad, String correo){
+    public Pasajero(int DNI,String telefono, String estadocivil, int edad, String correo,boolean miembro){
         this.DNI=DNI;
         this.telefono = telefono;
         this.estadocivil = estadocivil;
         this.edad = edad;
         this.correo = correo;
+        this.miembro= miembro;
     }
     public boolean validarEdad(){
         if(this.edad>=18){
@@ -21,6 +24,17 @@ public class Pasajero {
             return false;
         }
     }
+
+    public String getRegalo() {
+        return regalo;
+    }
+
+    public void setRegalo(String regalo) {
+        this.regalo = regalo;
+    }
+
+    public abstract String obtenerObsequio();
+
     public String getTelefono() {
         return telefono;
     }
@@ -41,6 +55,10 @@ public class Pasajero {
         return DNI;
     }
 
+    public boolean isMiembro() {
+        return miembro;
+    }
+
     @Override
     public String toString() {
         return "Pasajero{" +
@@ -49,6 +67,8 @@ public class Pasajero {
                 ", estadocivil='" + estadocivil + '\'' +
                 ", edad=" + edad +
                 ", correo='" + correo + '\'' +
+                ", miembro='" + miembro + '\'' +
+                ", regalo='" + regalo + '\'' +
                 '}';
     }
 }
